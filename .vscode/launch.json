@@ -1,0 +1,25 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            // デバックの起動名
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            // 現在開いているファイルをデバックする
+            "program": "${file}",
+            // 出力先
+            "outFiles": [
+                "${workspaceFolder}/outDir/**/*.js"
+            ],
+            // task.jsのLabelに合わせる。tsconfingを使ったBuildを行うための設定
+            "preLaunchTask": "build-ts"
+        }
+    ]
+}
