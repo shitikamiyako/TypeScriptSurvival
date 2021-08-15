@@ -14,9 +14,11 @@
             ],
             // 現在開いているファイルをデバックする
             "program": "${file}",
-            // 出力先
+            // マップファイル対象外のコードのステップを省略します
+            "smartStep": true,
+            // 出力先。ここは必ず正確にパスを指定すること。
             "outFiles": [
-                "${workspaceFolder}/outDir/**/*.js"
+                "${workspaceFolder}/test/outDir/**/*.js"
             ],
             // task.jsのLabelに合わせる。tsconfingを使ったBuildを行うための設定
             "preLaunchTask": "build-ts"
